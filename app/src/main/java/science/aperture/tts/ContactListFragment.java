@@ -1,6 +1,7 @@
 package science.aperture.tts;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -18,6 +19,8 @@ import java.util.ArrayList;
 import science.aperture.tts.datahandling.Contact;
 import science.aperture.tts.datahandling.ContactAdapter;
 
+import static android.app.Activity.RESULT_OK;
+
 public class ContactListFragment extends Fragment {
 //    private OnFragmentInteractionListener mListener;
 //
@@ -33,6 +36,7 @@ public class ContactListFragment extends Fragment {
     ArrayList<Contact> contactList;
     ContactAdapter contactAdapter;
     ListView contactListView;
+    public static int RESULT_CODE = 101;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -75,9 +79,28 @@ public class ContactListFragment extends Fragment {
 //            }
 //        });
 
+        view.findViewById(R.id.add_contact_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivityForResult(new Intent(getActivity(), AddContactActivity.class), RESULT_CODE);
+            }
+        });
+
         return view;
     }
-//    @Override
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+//        if (requestCode == RESULT_CODE) {
+//            if (resultCode == RESULT_OK) {
+                Toast.makeText(getContext(), data.getStringExtra(AddContactActivity.EXTRA), Toast.LENGTH_LONG).show();
+//            }
+//        }
+    }
+
+    //    @Override
 //    public void onAttach(Context context) {
 //        super.onAttach(context);
 //        if (context instanceof OnFragmentInteractionListener) {
