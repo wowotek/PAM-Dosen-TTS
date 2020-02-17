@@ -68,10 +68,8 @@ public class ContactListFragment extends Fragment {
 //            @Override
 //            public void onClick(View v) {
 //                if (listProduct.size() > 0) {
-//                    //Xoá phần tử đầu tiên của danh sách
 //                    int productpost = 0;
 //                    listProduct.remove(productpost);
-//                    //Thông báo cho ListView biết dữ liệu đã thay đổi (cập nhật, xoá ...)
 //                    productListViewAdapter.notifyDataSetChanged();
 //                }
 //            }
