@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TugasTengahSemester</string>
+
+    <!-- Contact List Fragment -->
+    <string name="button_add_string">Add Contact</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
