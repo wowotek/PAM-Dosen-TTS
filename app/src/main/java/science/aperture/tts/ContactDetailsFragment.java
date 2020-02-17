@@ -9,8 +9,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class ContactDetailsFragment extends Fragment {
+
+    public static TextView name;
+    public static TextView number;
 
     public ContactDetailsFragment() {}
 
@@ -28,6 +32,8 @@ public class ContactDetailsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_contact_details, container, false);
 
+        name = view.findViewById(R.id.contact_details_name);
+        number = view.findViewById(R.id.contact_details_number);
         return view;
     }
 

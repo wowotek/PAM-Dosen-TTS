@@ -10,8 +10,8 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="204dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
@@ -22,11 +22,28 @@
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="280dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="185dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

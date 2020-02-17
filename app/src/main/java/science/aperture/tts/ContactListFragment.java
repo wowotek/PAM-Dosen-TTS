@@ -58,6 +58,9 @@ public class ContactListFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Contact contact = (Contact) contactAdapter.getItem(position);
                 Toast.makeText(view.getContext(), contact.getName(), Toast.LENGTH_LONG).show();
+
+                ContactDetailsFragment.name.setText(contact.getName());
+                ContactDetailsFragment.number.setText(contact.getNumber());
             }
         });
 
